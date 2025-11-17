@@ -1,10 +1,10 @@
 const actions = [
   "Hugs",
   "Shoulder Pat",
-  "Side Hug (Upper Body)",
+  "Side Hug",
   "Sitting Close",
   "Holding Arm",
-  "Play Fighting/Pushing/Hitting",
+  "Play Fighting",
   "Head Rest on Shoulder",
   "Hand Holding"
 ];
