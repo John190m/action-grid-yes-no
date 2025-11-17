@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Action Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Action Grid</h1>
+      <p class="subtitle">Click a square to choose Yes (✓) or No (✕).</p>
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <div id="controls" class="controls" hidden>
+      <div id="controls-label" class="controls-label">
+        Select an action above to choose Yes or No.
+      </div>
+      <div class="controls-actions">
+        <button id="controls-yes" type="button" class="btn btn-yes">Yes ✓</button>
+        <button id="controls-no" type="button" class="btn btn-no">No ✕</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
