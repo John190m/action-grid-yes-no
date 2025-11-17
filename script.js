@@ -17,16 +17,20 @@ const controlsNoBtn = document.getElementById("controls-no");
 
 let selectedIndex = null;
 const badges = [];
+const cards = [];
 
 function renderGrid() {
   gridEl.innerHTML = "";
   badges.length = 0;
+  cards.length = 0;
 
   actions.forEach((label, index) => {
     const card = document.createElement("button");
     card.type = "button";
     card.className = "card";
     card.dataset.index = String(index);
+
+    cards[index] = card;
 
     const title = document.createElement("div");
     title.className = "card-title";
@@ -42,7 +46,11 @@ function renderGrid() {
     card.appendChild(badge);
 
     card.addEventListener("click", () => {
+      if (selectedIndex !== null && cards[selectedIndex]) {
+        cards[selectedIndex].classList.remove("card--selected");
+      }
       selectedIndex = index;
+      card.classList.add("card--selected");
       controlsLabelEl.textContent = `Selected action: ${label}`;
       controlsEl.hidden = false;
     });
@@ -59,6 +67,7 @@ controlsYesBtn.addEventListener("click", () => {
   if (badge) {
     badge.textContent = "You chose: Yes";
   }
+  launchConfetti();
 });
 
 controlsNoBtn.addEventListener("click", () => {
@@ -71,6 +80,30 @@ controlsNoBtn.addEventListener("click", () => {
   }
 });
 
+function launchConfetti() {
+  const container = document.createElement("div");
+  container.className = "confetti";
+
+  const colors = ["#f97316", "#22c55e", "#3b82f6", "#eab308", "#ec4899", "#a855f7"];
+  const pieces = 80;
+
+  for (let i = 0; i < pieces; i++) {
+    const piece = document.createElement("span");
+    piece.className = "confetti-piece";
+    piece.style.backgroundColor = colors[i % colors.length];
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.animationDelay = `${Math.random() * 0.3}s`;
+    piece.style.animationDuration = `${0.7 + Math.random() * 0.6}s`;
+    piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+    container.appendChild(piece);
+  }
+
+  document.body.appendChild(container);
+
+  setTimeout(() => {
+    container.remove();
+  }, 1500);
+}
 document.addEventListener("DOMContentLoaded", () => {
   renderGrid();
   if (controlsEl) {
