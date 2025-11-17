@@ -1,13 +1,12 @@
 const actions = [
-  "Call client",
-  "Review pull request",
-  "Write documentation",
-  "Plan sprint",
-  "Fix bugs",
-  "Design prototype",
-  "Refactor module",
-  "Check metrics",
-  "Sync with team"
+  "Hugs",
+  "Shoulder Pat",
+  "Side Hug (Upper Body)",
+  "Sitting Close",
+  "Holding Arm",
+  "Play Fighting/Pushing/Hitting",
+  "Head Rest on Shoulder",
+  "Hand Holding"
 ];
 
 const gridEl = document.getElementById("grid");
@@ -72,4 +71,9 @@ controlsNoBtn.addEventListener("click", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", renderGrid);
+document.addEventListener("DOMContentLoaded", () => {
+  renderGrid();
+  if (controlsEl) {
+    controlsEl.hidden = true;
+  }
+});
