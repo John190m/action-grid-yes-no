@@ -111,8 +111,8 @@ function showPleadingEmoji() {
   overlay.className = "pleading-overlay";
 
   const img = document.createElement("img");
-  img.src = "pleading-hamster.png";
-  img.alt = "Pleading hamster";
+  img.src = "crying-tv.gif";
+  img.alt = "Crying TV";
   img.className = "pleading-image";
 
   overlay.appendChild(img);

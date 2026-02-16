@@ -182,7 +182,7 @@ h1 {
 }
 
 .pleading-image {
-  max-width: min(260px, 70vw);
+  max-width: min(360px, 90vw);
   height: auto;
   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
 }
