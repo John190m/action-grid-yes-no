@@ -109,8 +109,13 @@ function launchConfetti() {
 function showPleadingEmoji() {
   const overlay = document.createElement("div");
   overlay.className = "pleading-overlay";
-  overlay.textContent = "🥺";
 
+  const img = document.createElement("img");
+  img.src = "pleading-hamster.png";
+  img.alt = "Pleading hamster";
+  img.className = "pleading-image";
+
+  overlay.appendChild(img);
   document.body.appendChild(overlay);
 
   setTimeout(() => {
