@@ -120,7 +120,7 @@ function showPleadingEmoji() {
 
   setTimeout(() => {
     overlay.remove();
-  }, 1800);
+  }, 3500);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

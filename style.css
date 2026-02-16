@@ -178,7 +178,7 @@ h1 {
   pointer-events: none;
   z-index: 60;
   opacity: 0;
-  animation: pleading-fade 1.8s ease-out forwards;
+  animation: pleading-fade 3.5s ease-out forwards;
 }
 
 .pleading-image {
