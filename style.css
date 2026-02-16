@@ -169,6 +169,34 @@ h1 {
   animation-fill-mode: forwards;
 }
 
+.pleading-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0;
+  animation: pleading-fade 1.8s ease-out forwards;
+}
+
+@keyframes pleading-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
 @keyframes confetti-fall {
   0% {
     transform: translate3d(0, -100%, 0) rotate(0deg);

@@ -78,6 +78,7 @@ controlsNoBtn.addEventListener("click", () => {
   if (badge) {
     badge.textContent = "You chose: No";
   }
+  showPleadingEmoji();
 });
 
 function launchConfetti() {
@@ -104,6 +105,19 @@ function launchConfetti() {
     container.remove();
   }, 1500);
 }
+
+function showPleadingEmoji() {
+  const overlay = document.createElement("div");
+  overlay.className = "pleading-overlay";
+  overlay.textContent = "🥺";
+
+  document.body.appendChild(overlay);
+
+  setTimeout(() => {
+    overlay.remove();
+  }, 1800);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderGrid();
   if (controlsEl) {
