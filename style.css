@@ -201,7 +201,7 @@ h1 {
   }
 }
 
-.confetti-piece {
+.pleading-overlay {
   position: fixed;
   inset: 0;
   display: flex;
