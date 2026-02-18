@@ -169,7 +169,39 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-.pleading-overlay {
+.yippee-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 45; /* under confetti (50), above content */
+  opacity: 0;
+  animation: yippee-fade 1.8s ease-out forwards;
+}
+
+.yippee-image {
+  max-width: min(380px, 90vw);
+  height: auto;
+}
+
+@keyframes yippee-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+.confetti-piece {
   position: fixed;
   inset: 0;
   display: flex;

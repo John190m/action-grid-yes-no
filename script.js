@@ -82,6 +82,18 @@ controlsNoBtn.addEventListener("click", () => {
 });
 
 function launchConfetti() {
+  // Background Yippee gif overlay (behind confetti)
+  const yippeeOverlay = document.createElement("div");
+  yippeeOverlay.className = "yippee-overlay";
+
+  const yippeeImg = document.createElement("img");
+  yippeeImg.src = "yippee-tv.gif";
+  yippeeImg.alt = "Yippee TV";
+  yippeeImg.className = "yippee-image";
+
+  yippeeOverlay.appendChild(yippeeImg);
+
+  // Confetti layer
   const container = document.createElement("div");
   container.className = "confetti";
 
@@ -99,11 +111,13 @@ function launchConfetti() {
     container.appendChild(piece);
   }
 
+  document.body.appendChild(yippeeOverlay);
   document.body.appendChild(container);
 
   setTimeout(() => {
     container.remove();
-  }, 1500);
+    yippeeOverlay.remove();
+  }, 1800);
 }
 
 function showPleadingEmoji() {
