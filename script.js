@@ -4,7 +4,7 @@ const actions = [
   "Side Hug",
   "Sitting Close",
   "Holding Arm",
-  "Compliment",
+  "Reassurance",
   "Head Rest on Shoulder",
   "Hand Holding"
 ];
